@@ -5,6 +5,7 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", config = true },
         { "folke/neodev.nvim", opts = {} },
+        { "j-hui/fidget.nvim" }, -- Adds lsp info to the bottom right
     },
     config = function()
         -- import lspconfig plugin
@@ -17,6 +18,11 @@ return {
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
         local keymap = vim.keymap -- for conciseness
+
+        require("fidget").setup({})
+
+        -- Adds black background to auto completion box
+        vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#000000" })
 
         -- Executes logic when an LSP attaches to a buffer
         vim.api.nvim_create_autocmd("LspAttach", {
