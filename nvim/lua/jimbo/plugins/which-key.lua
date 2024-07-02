@@ -3,9 +3,9 @@ return {
     event = "VeryLazy",
     init = function()
         vim.o.timeout = true
-        vim.o.timeoutlen = 500
+        vim.o.timeoutlen = 750
     end,
     opts = {
-        -- Just uses default config if left empty  
+        -- Just uses default config if left empty
     },
 }
