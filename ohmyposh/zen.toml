@@ -30,7 +30,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
             commit_icon = '@'
             fetch_status = true
 
-
 [[blocks]]
     type = 'rprompt'
     overflow = 'hidden'
@@ -45,7 +44,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
         [blocks.segments.properties]
             threshold = 4000
 
-    
+
 [[blocks]]
     type = 'prompt'
     alignment = 'left'
