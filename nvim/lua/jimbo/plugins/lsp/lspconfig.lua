@@ -19,7 +19,7 @@ return {
 
         local keymap = vim.keymap -- for conciseness
 
-        require("fidget").setup({})
+        -- require("fidget").setup({})
 
         -- Adds black background to auto completion box
         vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#000000" })
