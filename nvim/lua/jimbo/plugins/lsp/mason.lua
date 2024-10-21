@@ -33,11 +33,10 @@ return {
                 "html",
                 "lua_ls",
                 "jdtls",
-                "tsserver",
+                -- "tsserver",
                 "bashls",
-                "clangd",
+                -- "clangd",
                 "cmake",
-                "unocss",
                 "htmx",
                 "hls",
                 "sqls",
@@ -56,4 +55,3 @@ return {
         })
     end,
 }
-
