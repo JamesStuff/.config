@@ -1,0 +1,7 @@
+{
+    "initial_working_directory": "~",
+    "posix_terminal_shell": "bash",
+    "syntax_color_console": true,
+    "spelling_dictionary_language": "en_GB",
+    "editor_theme": "Tomorrow Night"
+}
