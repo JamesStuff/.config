@@ -51,6 +51,15 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     newline = true
 
     [[blocks.segments]]
+        type = "python"
+        # foreground = "#100e23"
+        template = "  {{ if .Venv }}{{ .Venv }}{{ else }}{{ .Full }}{{ end }} "
+
+        [blocks.segments.properties]
+            display_mode = "venv"
+            prefix = "🐍 "
+
+    [[blocks.segments]]
         type = 'text'
         style = 'plain'
         foreground_templates = [
