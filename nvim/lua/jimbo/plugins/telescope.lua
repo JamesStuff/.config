@@ -33,6 +33,16 @@ return {
         keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
         keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
         keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find TODOs" })
+        keymap.set("n", "<leader>fn", function()
+            require("telescope.builtin").find_files({
+                cwd = vim.fn.stdpath("config"),
+            })
+        end, { desc = "Find files in .config/nvim" })
+
+        keymap.set("n", "<leader>fN", function()
+            require("telescope.builtin").live_grep({
+                cwd = vim.fn.stdpath("config"),
+            })
+        end, { desc = "Find strings in .config/nvim" })
     end,
 }
-
