@@ -12,6 +12,8 @@ return {
         -- configure treesitter
         treesitter.setup({
             -- enable syntax highlighting
+            modules = {},
+            ignore_install = {},
             highlight = {
                 enable = true,
 
@@ -52,6 +54,7 @@ return {
                 "rust",
                 "haskell",
                 "python",
+                "zig",
                 "vimdoc",
             },
             -- Install parsers synchronously (only applied to `ensure_installed`)
