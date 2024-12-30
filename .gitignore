@@ -26,3 +26,11 @@ Temporary Items
 .apdisk
 /nvim/lazy-lock.json
 /nvim/spell
+/rstudio
+/yabai
+*.bak
+/iterm
+/asciinema
+/karabiner
+/nvim/package.json
+/nvim/package-lock.json
