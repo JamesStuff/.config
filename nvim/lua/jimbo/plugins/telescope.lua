@@ -1,3 +1,4 @@
+-- TODO: Have a look at fzf-lua, seems to be in vogue at the moment...
 return {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
@@ -5,7 +6,7 @@ return {
         "nvim-lua/plenary.nvim",
         { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
         "nvim-tree/nvim-web-devicons",
-        "folke/todo-comments.nvim"
+        "folke/todo-comments.nvim",
     },
 
     config = function()
@@ -14,6 +15,13 @@ return {
 
         telescope.setup({
             defaults = {
+                layout_strategy = "flex",
+                layout_config = {
+                    flex = {
+                        -- flip_columns = 110,
+                        flip_columns = 120,
+                    },
+                },
                 path_display = { "smart" },
                 mappings = {
                     i = {
@@ -36,12 +44,14 @@ return {
         keymap.set("n", "<leader>fn", function()
             require("telescope.builtin").find_files({
                 cwd = vim.fn.stdpath("config"),
+                prompt_title = "Find files in .config/nvim",
             })
         end, { desc = "Find files in .config/nvim" })
 
         keymap.set("n", "<leader>fN", function()
             require("telescope.builtin").live_grep({
                 cwd = vim.fn.stdpath("config"),
+                prompt_title = "Live Grep .config/nvim",
             })
         end, { desc = "Find strings in .config/nvim" })
     end,
