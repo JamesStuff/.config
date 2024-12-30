@@ -39,10 +39,11 @@ preset = 'qwerty'
 inner.horizontal = 7
 inner.vertical =   7
 # Gaps around the monitor
+# TODO: Put in a PR for this...
 outer.left =       0
-outer.bottom =     0
+outer.bottom =     -1
 outer.top =        0
-outer.right =      0
+outer.right =      -1
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
