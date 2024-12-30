@@ -67,7 +67,7 @@ outer.right =      -1
 # TODO: Have a look at getting the § key working on GB-Mac Keyboards
 # Might require upstream changed to HotKey swift library...
 
-alt-enter = 'exec-and-forget open -n /Applications/Alacritty.app' # use Super + N to open new alacritty terminal
+# alt-enter = 'exec-and-forget open -n /Applications/Alacritty.app' # use Super + N to open new alacritty terminal
 
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
