@@ -58,7 +58,7 @@ family = "MesloLGM Nerd Font Mono"
 
 
 [colors]
-cursor = { text = "CellBackground", cursor = "#ab352f" }
+cursor = { text = "CellBackground", cursor = "#c51f16" }
 
 [colors.primary]
 background = "#131c28"
