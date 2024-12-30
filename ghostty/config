@@ -1,0 +1,39 @@
+# ghostty +show-config --default --docs
+# ghostty +list-themes
+
+theme = dark:Jimbonaut,light:Tango Half Adapted
+
+font-family = "MesloLGM Nerd Font Mono"
+font-size = 13
+#font-thicken = true
+font-feature = -liga
+
+adjust-cursor-thickness = 3
+cursor-style-blink = false
+cursor-style = block
+#cursor-invert-fg-bg = true
+
+shell-integration-features = no-cursor
+shell-integration = zsh
+
+background-opacity = 0.9
+background-blur-radius = 20
+
+window-padding-balance = true
+window-padding-color = extend
+#window-padding-color = background   # tmux fix apparently
+window-decoration = false
+
+macos-icon = custom-style
+macos-icon-ghost-color = #ff2740
+macos-icon-screen-color = #131c28
+
+
+quick-terminal-screen = macos-menu-bar
+keybind = global:alt+enter=toggle_quick_terminal
+keybind = global:alt+shift+enter=new_window
+quick-terminal-animation-duration = 0
+
+# Pre-release builds
+auto-update-channel = tip
+
