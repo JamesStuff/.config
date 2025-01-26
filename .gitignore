@@ -35,3 +35,7 @@ Temporary Items
 /nvim/package.json
 /nvim/package-lock.json
 /nvim/lazyvim.json
+*.log
+/gollama
+/nvim-backup
+/ohmyposh/zen.toml.backup
