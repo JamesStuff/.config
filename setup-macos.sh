@@ -94,3 +94,4 @@ dockutil --add '~/Downloads' --view list --display folder
 echo "Setting up git"
 git config --global user.name "James Robinson"
 git config --global user.email "james@jamesrob.com"
+git config --global core.excludesfile ~/.config/git/.gitignore
