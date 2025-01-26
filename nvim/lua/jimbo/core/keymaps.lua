@@ -59,11 +59,14 @@ keymap.set("v", "<Right>", ':lua print("Arrow keys are disabled")<CR>', { norema
 -- Accounting for shift being held down for to long when doing :wa
 vim.api.nvim_create_user_command("Wa", "wa", {})
 
+-- Apply the first spelling suggestion to a word
+keymap.set("n", "<leader>z", "1z=", { desc = "Spelling: Apply first suggestion" }) -- split window vertically
+
 -- TODO: Have a look at Prime's nice re-mappings...
 
 -- Move lines up and down in Visual mode?
--- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- ciq: Function to determine which quote is first and perform the corresponding `ci` operation
 local function change_inside_quote()

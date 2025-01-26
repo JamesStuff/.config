@@ -53,3 +53,7 @@ vim.api.nvim_create_autocmd("CmdlineLeave", {
         vim.opt.cmdheight = 0
     end,
 })
+
+-- TODO: Fix...
+-- Suppress file write message
+vim.opt.shortmess:append("F")

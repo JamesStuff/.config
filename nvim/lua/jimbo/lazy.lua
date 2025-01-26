@@ -11,12 +11,40 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "jimbo.plugins"}, {import = "jimbo.plugins.lsp" } }, {
-    checker = {
-        enabled = true,
-        notify = false,
+require("lazy").setup({
+  { import = "jimbo.plugins" },
+  { import = "jimbo.plugins.lsp" },
+  -- spec = {
+    -- { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+
+    --   { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    -- { import = "lazyvim.plugins.extras.lang.clangd" },
+    --   { import = "lazyvim.plugins.extras.lang.java" },
+    --   { import = "lazyvim.plugins.extras.lang.json" },
+    --   { import = "lazyvim.plugins.extras.lang.python" },
+    --   { import = "lazyvim.plugins.extras.lang.yaml" },
+  -- },
+}, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+  performance = {
+    cache = {
+      enabled = true,
     },
-    change_detection = {
-        notify = false,
+    rtp = {
+      disabled_plugins = {
+        "netrwPlugin",
+        -- "gzip",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
     },
+  },
 })

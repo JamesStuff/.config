@@ -36,6 +36,7 @@ return {
                 "json",
                 "javascript",
                 "typescript",
+                "glsl",
                 "tsx",
                 "yaml",
                 "html",
@@ -55,6 +56,7 @@ return {
                 "haskell",
                 "python",
                 "zig",
+                "glsl",
                 "vimdoc",
             },
             -- Install parsers synchronously (only applied to `ensure_installed`)
