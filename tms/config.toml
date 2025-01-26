@@ -1,0 +1,29 @@
+excluded_dirs = ["/Users/jimbo/Code/_old"]
+
+[[search_dirs]]
+path = "/Users/jimbo/Code"
+depth = 3
+
+[[search_dirs]]
+path = "/Users/jimbo/uni/4041"
+depth = 3
+
+[[search_dirs]]
+path = "/Users/jimbo/uni/3007"
+depth = 3
+
+[[search_dirs]]
+path = "/Users/jimbo/uni/3011"
+depth = 3
+
+[[search_dirs]]
+path = "/Users/jimbo/uni/3006"
+depth = 3
+
+[[search_dirs]]
+path = "/Users/jimbo/.config"
+depth = 0
+
+[[search_dirs]]
+path = "/Users/jimbo/scripts"
+depth = 0
