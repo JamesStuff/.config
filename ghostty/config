@@ -20,16 +20,24 @@ background-opacity = 0.9
 background-blur-radius = 20
 
 window-padding-balance = true
-window-padding-color = extend
-#window-padding-color = background   # tmux fix apparently
+# window-padding-color = extend
+window-padding-color = background
 window-decoration = false
 
 macos-icon = custom-style
 macos-icon-ghost-color = #ff2740
-macos-icon-screen-color = #131c28
-
+macos-icon-screen-color = #1c304a
 
 quick-terminal-screen = macos-menu-bar
+quick-terminal-screen = mouse
+
+# # tmux fix for alt as meta...
+# macos-option-as-alt = left
+#
+# keybind = alt+left+-=unbind
+# keybind = alt+left+==unbind
+# keybind = alt+right=unbind
+
 keybind = global:alt+enter=toggle_quick_terminal
 keybind = global:alt+shift+enter=new_window
 quick-terminal-animation-duration = 0
@@ -37,3 +45,4 @@ quick-terminal-animation-duration = 0
 # Pre-release builds
 auto-update-channel = tip
 
+# custom-shader = ghostty-shaders/water.glsl
