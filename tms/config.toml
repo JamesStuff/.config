@@ -1,29 +1,30 @@
-excluded_dirs = ["/Users/jimbo/Code/_old"]
+excluded_dirs = ["Users/jimbo/Code/_old", "Users/jimbo/uni/4041/ECPending_cw-yield-20424504"]
 
 [[search_dirs]]
-path = "/Users/jimbo/Code"
+path = "~/Code"
 depth = 3
 
 [[search_dirs]]
-path = "/Users/jimbo/uni/4041"
+path = "~/uni/4041"
 depth = 3
 
 [[search_dirs]]
-path = "/Users/jimbo/uni/3007"
+path = "~/uni/3007"
 depth = 3
 
 [[search_dirs]]
-path = "/Users/jimbo/uni/3011"
+path = "~/uni/3011"
 depth = 3
 
 [[search_dirs]]
-path = "/Users/jimbo/uni/3006"
+path = "~/uni/3006"
 depth = 3
 
 [[search_dirs]]
-path = "/Users/jimbo/.config"
+path = "~/.config"
 depth = 0
 
 [[search_dirs]]
-path = "/Users/jimbo/scripts"
+path = "~/scripts"
 depth = 0
+
