@@ -17,6 +17,10 @@ path = "~/uni/3011"
 depth = 3
 
 [[search_dirs]]
+path = "~/uni/2001-ec/"
+depth = 3
+
+[[search_dirs]]
 path = "~/uni/3006"
 depth = 3
 
@@ -26,5 +30,9 @@ depth = 0
 
 [[search_dirs]]
 path = "~/scripts"
+depth = 0
+
+[[search_dirs]]
+path = "~/random_repos/"
 depth = 0
 
