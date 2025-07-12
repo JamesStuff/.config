@@ -1,7 +1,8 @@
 # ghostty +show-config --default --docs
 # ghostty +list-themes
 
-theme = dark:Jimbonaut,light:Tango Half Adapted
+# theme = dark:Jimbonaut,light:Tango Half Adapted
+theme = dark:Jimbonaut,light:ayu_light
 
 font-family = "MesloLGM Nerd Font Mono"
 font-size = 13
@@ -16,7 +17,7 @@ cursor-style = block
 shell-integration-features = no-cursor
 shell-integration = zsh
 
-background-opacity = 0.9
+background-opacity = 0.92
 background-blur-radius = 20
 
 window-padding-balance = true
@@ -25,8 +26,13 @@ window-padding-color = background
 window-decoration = false
 
 macos-icon = custom-style
-macos-icon-ghost-color = #ff2740
+# macos-icon-ghost-color = #ff2740
+macos-icon-ghost-color = #b30015 
 macos-icon-screen-color = #1c304a
+macos-icon-frame = plastic
+
+cursor-color = "#c51f16"
+
 
 quick-terminal-screen = macos-menu-bar
 quick-terminal-screen = mouse
@@ -46,3 +52,6 @@ quick-terminal-animation-duration = 0
 auto-update-channel = tip
 
 # custom-shader = ghostty-shaders/water.glsl
+
+# Automatically start tmux session
+# command = "/opt/homebrew/bin/tmux"
