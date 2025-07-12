@@ -1,0 +1,10 @@
+return {
+	"theprimeagen/vim-be-good",
+
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
+	lazy = true,
+
+	config = function() end,
+}
