@@ -33,6 +33,11 @@ path = "~/scripts"
 depth = 0
 
 [[search_dirs]]
-path = "~/random_repos/"
+path = "~/random_repos"
 depth = 0
+
+[[search_dirs]]
+path = "~/blog"
+depth = 0
+
 

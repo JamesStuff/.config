@@ -20,9 +20,8 @@ opt.inccommand = "split"
 opt.ignorecase = true
 opt.smartcase = true
 
-opt.cursorline = true
-
 -- Colours
+opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
@@ -52,17 +51,17 @@ opt.numberwidth = 3
 -- TODO: Have a look at noice.nvim...
 local cmdheight_group = vim.api.nvim_create_augroup("CmdHeightAdjust", {})
 vim.api.nvim_create_autocmd("CmdlineEnter", {
-	group = cmdheight_group,
-	callback = function()
-		vim.opt.cmdheight = 1
-	end,
+  group = cmdheight_group,
+  callback = function()
+    vim.opt.cmdheight = 1
+  end,
 })
 
 vim.api.nvim_create_autocmd("CmdlineLeave", {
-	group = cmdheight_group,
-	callback = function()
-		vim.opt.cmdheight = 0
-	end,
+  group = cmdheight_group,
+  callback = function()
+    vim.opt.cmdheight = 0
+  end,
 })
 
 -- TODO: Fix...

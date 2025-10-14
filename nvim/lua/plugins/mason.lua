@@ -36,7 +36,7 @@ return {
         "lua_ls",
         "jdtls",
         "glsl_analyzer",
-        -- "tsserver",
+        -- "ts_ls",
         "bashls",
         "clangd",
         "cmake",

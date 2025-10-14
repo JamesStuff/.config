@@ -1,0 +1,34 @@
+return {
+	cmd = {
+		"pyright",
+	},
+	filetypes = {
+		"py",
+		"python",
+	},
+	root_markers = {
+		".git",
+		".python-version",
+	},
+	settings = {
+		python = {
+			pythonPath = vim.fn.systemlist("pyenv which python")[1],
+			analysis = {
+				reportUnusedParameter = "none",
+				reportUnusedFunction = "none",
+			},
+			hints = {
+				reportUnusedParameter = "none",
+				reportUnusedFunction = "none",
+			},
+		},
+	},
+
+	single_file_support = true,
+	log_level = vim.lsp.protocol.MessageType.Warning,
+	-- keys = {
+	-- "<leader>co",
+	-- vim.lsp.action["source.organizeImports"],
+	-- desc = "Organise Imports",
+	-- },
+}

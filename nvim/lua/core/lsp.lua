@@ -40,6 +40,7 @@ vim.diagnostic.config({
 vim.lsp.config("pyright", {
   settings = {
     python = {
+      pythonPath = vim.fn.systemlist("pyenv which python")[1],
       analysis = {
         typeCheckingMode = "basic",
         reportFunctionMemberAccess = "none",
