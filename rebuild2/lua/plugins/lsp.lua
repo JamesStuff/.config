@@ -1,13 +1,13 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     config = function()
       require("mason").setup()
     end,
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = { "williamboman/mason.nvim" },
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = { "mason-org/mason.nvim" },
     config = function()
       local mason_lspconfig = require("mason-lspconfig")
 
@@ -27,6 +27,7 @@ return {
           "lua_ls",
           "ts_ls",
           "pyright",
+          "rust-analyzer",
         },
         automatic_installation = true,
         automatic_enable = true, -- Mason will auto-enable the LSPs

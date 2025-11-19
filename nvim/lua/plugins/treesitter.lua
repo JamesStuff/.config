@@ -48,6 +48,7 @@ return {
 				"vimdoc",
 				"luadoc",
 				"luap",
+				"ocaml",
 				"regex",
 				"gomod",
 				"gowork",

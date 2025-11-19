@@ -1,16 +1,12 @@
 return {
 	"stevearc/conform.nvim",
-	opts = {},
-	config = function()
-		require("conform").setup({
-			formatters_by_ft = {
-				lua = { "stylua" },
-				go = { "goimports", "golines", "gofmt" },
-			},
-			-- format_on_save = {
-			--     lsp_fallback = true,
-			--     async = false,
-			-- },
-		})
-	end,
+	opts = {
+		default_format_opts = { lsp_format = "fallback" },
+		formatters_by_ft = {
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
+			json = { "prettier" },
+			python = { "ruff" },
+		},
+	},
 }

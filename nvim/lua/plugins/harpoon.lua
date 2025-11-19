@@ -6,39 +6,45 @@ return {
 		local harpoon = require("harpoon")
 		harpoon:setup({})
 
-		-- basic telescope configuration
-		local conf = require("telescope.config").values
-		local function toggle_telescope(harpoon_files)
-			local file_paths = {}
-			for _, item in ipairs(harpoon_files.items) do
-				table.insert(file_paths, item.value)
+		-- Snacks picker configuration for Harpoon
+		local function toggle_snacks_picker(harpoon_files)
+			local items = {}
+			for i, item in ipairs(harpoon_files.items) do
+				table.insert(items, {
+					idx = i,
+					file = item.value,
+					text = item.value,
+				})
 			end
 
-			require("telescope.pickers")
-				.new({}, {
-					prompt_title = "Harpoon",
-					finder = require("telescope.finders").new_table({
-						results = file_paths,
-					}),
-					previewer = conf.file_previewer({}),
-					sorter = conf.generic_sorter({}),
-				})
-				:find()
+			Snacks.picker({
+				title = "Harpoon",
+				items = items,
+				format = function(item, _)
+					local ret = {}
+					local icon, icon_hl = Snacks.util.icon(item.file)
+					ret[#ret + 1] = { icon .. " ", icon_hl }
+					ret[#ret + 1] = { item.text }
+					return ret
+				end,
+				confirm = function(picker, item)
+					picker:close()
+					if item then
+						vim.cmd("edit " .. item.file)
+					end
+				end,
+			})
 		end
 
 		vim.keymap.set("n", "<C-e>", function()
-			toggle_telescope(harpoon:list())
+			toggle_snacks_picker(harpoon:list())
 		end, { desc = "Open harpoon window" })
 
-		-- Begining of default config for harpoon...
-
+		-- Add item to Harpoon list
 		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():add()
 			print("File added to Harpoon list")
 		end, { desc = "Add item to Harpoon list" })
-		-- vim.keymap.set("n", "<C-e>", function()
-		--     harpoon.ui:toggle_quick_menu(harpoon:list())
-		-- end)
 
 		-- Quick change keymaps
 		vim.keymap.set("n", "<C-h>", function()
@@ -69,7 +75,7 @@ return {
 		end)
 
 		vim.keymap.set("n", "<leader>h", function()
-			toggle_telescope(harpoon:list())
+			toggle_snacks_picker(harpoon:list())
 		end, { desc = "Open harpoon window" })
 	end,
 }

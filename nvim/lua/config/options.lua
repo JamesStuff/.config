@@ -1,7 +1,7 @@
-vim.cmd("let g:netrw_liststyle = 3")
-
 local opt = vim.opt
+local keymap = vim.keymap
 
+-- Line Numbering
 opt.relativenumber = true
 opt.number = true
 
@@ -13,8 +13,8 @@ opt.autoindent = true
 
 opt.wrap = false
 
--- Shows the effects of substitute and other commands as your typing
-opt.inccommand = "split"
+-- Default gutter width for line numbers
+opt.numberwidth = 3
 
 -- Search Settings
 opt.ignorecase = true
@@ -26,28 +26,21 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
--- Clipboard
-opt.clipboard:append("unnamedplus") -- Uses system clipboard
+-- Colour line to force good habits
+opt.colorcolumn = { 80, 120 }
 
 -- Splitting Windows
 opt.splitright = true
 opt.splitbelow = true
 
 -- Spelling
-opt.spelllang = "en_gb"
 opt.spell = true
+opt.spelllang:append({ "en_gb" })
+vim.opt.spelloptions = "camel"
 
 -- Stops `o` from adding a comment
 opt.formatoptions:remove("o")
 
--- Colour line to force good habits
-opt.colorcolumn = { 80, 120 }
-
--- Default gutter width for line numbers
-opt.numberwidth = 3
-
--- -- Set cmdheight to 0 to hide the command line area when idle
--- vim.opt.cmdheight = 0
 -- TODO: Have a look at noice.nvim...
 local cmdheight_group = vim.api.nvim_create_augroup("CmdHeightAdjust", {})
 vim.api.nvim_create_autocmd("CmdlineEnter", {
@@ -67,3 +60,26 @@ vim.api.nvim_create_autocmd("CmdlineLeave", {
 -- TODO: Fix...
 -- Suppress file write message
 opt.shortmess:append("F")
+
+-- Window Management
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })     -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })   -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })      -- make split windows equal width & height
+keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+
+keymap.set("n", "<Up>", ':lua print("Arrow keys are disabled")<CR>', { noremap = true, silent = true })
+keymap.set("n", "<Down>", ':lua print("Arrow keys are disabled")<CR>', { noremap = true, silent = true })
+keymap.set("n", "<Left>", ':lua print("Arrow keys are disabled")<CR>', { noremap = true, silent = true })
+keymap.set("n", "<Right>", ':lua print("Arrow keys are disabled")<CR>', { noremap = true, silent = true })
+
+-- ...
+-- We have the same for all modes
+
+keymap.set("n", "<leader>z", "1z=", { desc = "Spelling: Apply first suggestion" }) -- split window vertically
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Yanking
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y') -- yank to clipboard
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p') -- paste from clipboard
