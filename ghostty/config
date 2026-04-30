@@ -17,8 +17,10 @@ cursor-style = block
 shell-integration-features = no-cursor
 shell-integration = zsh
 
+# Liquid Glass Testing
 background-opacity = 0.92
 background-blur-radius = 20
+# background-blur = macos-glass-regular
 
 window-padding-balance = true
 # window-padding-color = extend

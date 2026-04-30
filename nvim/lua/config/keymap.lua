@@ -1,81 +1,82 @@
 local keymap = vim.keymap
 local Snacks = require("snacks")
 
+vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { silent = true, desc = "No search highlights" })
 -- Files
 keymap.set("n", "<leader>ff", function()
-	Snacks.picker.files()
+  Snacks.picker.files()
 end, { desc = "Find files in cwd" })
 keymap.set("n", "<leader>fR", function()
-	Snacks.picker.recent()
+  Snacks.picker.recent()
 end, { desc = "Find recent files" })
 keymap.set("n", "<leader>fs", function()
-	Snacks.picker.grep()
+  Snacks.picker.grep()
 end, { desc = "Live grep in cwd" })
 keymap.set("n", "<leader>fc", function()
-	Snacks.picker.grep_word()
+  Snacks.picker.grep_word()
 end, { desc = "Grep string under cursor" })
 
 -- TODO: s (assuming you're using todo-comments + Snacks)
 keymap.set("n", "<leader>ft", function()
-	Snacks.picker.todo_comments()
+  Snacks.picker.todo_comments()
 end, { desc = "Find TODOs" })
 keymap.set("n", "<leader>fq", function()
-	Snacks.picker.qflist()
+  Snacks.picker.qflist()
 end, { desc = "Quickfix List" })
 keymap.set("n", "<leader>fT", function()
-	Snacks.picker()
+  Snacks.picker()
 end, { desc = "Open Snacks picker menu" })
 
 keymap.set("n", "<leader>fn", function()
-	Snacks.picker.files({
-		cwd = vim.fn.stdpath("config"),
-		title = "Find files in .config/nvim",
-	})
+  Snacks.picker.files({
+    cwd = vim.fn.stdpath("config"),
+    title = "Find files in .config/nvim",
+  })
 end, { desc = "Find files in .config/nvim" })
 
 keymap.set("n", "<leader>fN", function()
-	Snacks.picker.grep({
-		cwd = vim.fn.stdpath("config"),
-		title = "Live Grep .config/nvim",
-	})
+  Snacks.picker.grep({
+    cwd = vim.fn.stdpath("config"),
+    title = "Live Grep .config/nvim",
+  })
 end, { desc = "Find strings in .config/nvim" })
 
 -- Buffers & Help
 keymap.set("n", "<leader>fb", function()
-	Snacks.picker.buffers()
+  Snacks.picker.buffers()
 end, { desc = "Buffers" })
 keymap.set("n", "<leader>fh", function()
-	Snacks.picker.help()
+  Snacks.picker.help()
 end, { desc = "Help tags" })
 keymap.set("n", "<leader>fk", function()
-	Snacks.picker.keymaps()
+  Snacks.picker.keymaps()
 end, { desc = "Keymaps" })
-keymap.set("n", "<leader>n", function()
-	Snacks.picker.notifications()
+keymap.set("n", "<leader>no", function()
+  Snacks.picker.notifications()
 end, { desc = "Notifications" })
 
 -- LSP
 keymap.set("n", "gd", function()
-	Snacks.picker.lsp_definitions()
+  Snacks.picker.lsp_definitions()
 end, { desc = "Goto Definition" })
 keymap.set("n", "gD", function()
-	Snacks.picker.lsp_declarations()
+  Snacks.picker.lsp_declarations()
 end, { desc = "Goto Declaration" })
 keymap.set("n", "gr", function()
-	Snacks.picker.lsp_references()
+  Snacks.picker.lsp_references()
 end, { nowait = true, desc = "References" })
 keymap.set("n", "gI", function()
-	Snacks.picker.lsp_implementations()
+  Snacks.picker.lsp_implementations()
 end, { desc = "Goto Implementation" })
 keymap.set("n", "gy", function()
-	Snacks.picker.lsp_type_definitions()
+  Snacks.picker.lsp_type_definitions()
 end, { desc = "Goto T[y]pe Definition" })
 -- keymap.set("n", "<leader>ss", function() Snacks.picker.lsp_symbols() end, { desc = "LSP Symbols" })
 keymap.set("n", "<leader>fS", function()
-	Snacks.picker.lsp_workspace_symbols()
+  Snacks.picker.lsp_workspace_symbols()
 end, { desc = "LSP Workspace Symbols" })
 
 -- Other Pickers
 keymap.set("n", "fC", function()
-	Snacks.picker.colorschemes()
+  Snacks.picker.colorschemes()
 end, { desc = "Colourschemes" })

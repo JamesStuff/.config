@@ -1,6 +1,8 @@
 -- vim.cmd("colorscheme palenight")
--- vim.cmd("colorscheme rigel")
-vim.cmd("colorscheme ayu")
+vim.cmd("colorscheme rigel")
+-- vim.cmd("colorscheme ayu")
+-- vim.cmd("colorscheme srcery")
+-- vim.cmd("colorscheme stoics")
 
 -- vim.api.nvim_set_hl(0, "Pmenu", { bg = "#242933" })
 --
@@ -20,8 +22,8 @@ vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
 -- })
 
 vim.api.nvim_set_hl(0, "CursorLine", {
-	bg = 2633788, -- Dark gray that looks semi-transparent
-	-- blend = 50, -- Additional blending
+  bg = 2633788, -- Dark gray that looks semi-transparent
+  -- blend = 50, -- Additional blending
 })
 
 --
